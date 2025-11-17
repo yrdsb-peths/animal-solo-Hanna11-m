@@ -14,6 +14,17 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
          */
         public void act()
         {
-            setLocation(getX(), getY() + 1);
+            //Apple falls downwards.
+            int x = getX();
+            int y = getY() + 2;
+            setLocation(x, y);
+            
+            //Remove apple and draw the game over when apple gets to the bottom
+            MyWorld world = (MyWorld) getWorld();
+            if(getY() >= world.getHeight())
+            {
+                world.gameOver();
+                world.removeObject(this);
+            }
         }
     }
