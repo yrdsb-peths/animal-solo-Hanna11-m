@@ -15,7 +15,7 @@ public class MyWorld extends World {
         super(600, 400, 1, false);
         
         // Set background
-        GreenfootImage bg = new GreenfootImage("images/Background.png");
+        GreenfootImage bg = new GreenfootImage("Background.png");
         bg.scale(getWidth(), getHeight());
         setBackground(bg);
         
