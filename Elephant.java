@@ -9,6 +9,16 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Elephant extends Actor
 {
     GreenfootSound elephantSound = new GreenfootSound("Elephant Sound.mp3");
+    GreenfootImage idle = new GreenfootImage("images/elephant_idle/idle_0.png");
+    
+    /**
+     * Constructor - the code that gets run one time when object is created.
+     */
+    public Elephant()
+    {
+        setImage(idle);
+    }
+    
     public void act()
     {
         if(Greenfoot.isKeyDown("left"))
