@@ -8,6 +8,13 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
     public class Apple extends Actor
     {
+        public Apple()
+        {
+            GreenfootImage ap = getImage();
+            ap.scale(ap.getWidth()/5, ap.getHeight()/5);
+            setImage(ap);
+        }
+        
         /**
          * Act - do whatever the Apple wants to do. This method is called whenever
          * the 'Act' or 'Run' button gets pressed in the environment.
