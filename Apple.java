@@ -15,6 +15,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
             setImage(ap);
         }
         
+        int speed = 1;
+        
         /**
          * Act - do whatever the Apple wants to do. This method is called whenever
          * the 'Act' or 'Run' button gets pressed in the environment.
@@ -23,7 +25,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
         {
             //Apple falls downwards.
             int x = getX();
-            int y = getY() + 2;
+            int y = getY() + speed;
             setLocation(x, y);
             
             //Remove apple and draw the game over when apple gets to the bottom
@@ -33,5 +35,10 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
                 world.gameOver();
                 world.removeObject(this);
             }
+        }
+        
+        public void setSpeed(int spd)
+        {
+            speed = spd;
         }
     }

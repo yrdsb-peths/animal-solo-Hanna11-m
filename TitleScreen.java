@@ -20,6 +20,11 @@ public class TitleScreen extends World
 
         addObject(titleLabel, 300, 100);
         prepare();
+        
+        //Set the background of the TitleScreen
+        GreenfootImage bg = new GreenfootImage("TitleScreen.png");
+        bg.scale(getWidth(), getHeight());
+        setBackground(bg);
     }
 
     /**
